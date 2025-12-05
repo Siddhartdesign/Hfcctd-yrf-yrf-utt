@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Viewfinder Clean UI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<video id="video" autoplay playsinline muted></video>
+<canvas id="canvas"></canvas>
+
+<!-- LEFT SIDE CONTROLS -->
+<div id="leftControls">
+
+  <!-- FRAME BUTTON (circle → expands upward) -->
+  <div id="frameContainer">
+    <button id="frameBtn" class="circle-btn semi">◧</button>
+
+    <div id="frameMenu" class="frame-menu hidden">
+      <button class="frameOption" data-r="1">1:1</button>
+      <button class="frameOption" data-r="5/7">5:7</button>
+      <button class="frameOption" data-r="4/5">4:5</button>
+      <button class="frameOption" data-r="1.618">Golden</button>
+    </div>
+  </div>
+
+  <!-- LINE BUTTON (horizontal pill → expands downward) -->
+  <div id="lineContainer">
+    <button id="lineBtn" class="pill-btn semi">• │ — /</button>
+
+    <div id="lineMenu" class="line-menu hidden">
+      <button class="lineOption" data-mode="dot">Dot</button>
+      <button class="lineOption" data-mode="vertical">│</button>
+      <button class="lineOption" data-mode="horizontal">—</button>
+      <button class="lineOption" data-mode="slant">/</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- RIGHT SIDE CONTROLS -->
+<div id="rightControls">
+
+  <button id="shutterBtn" class="circle-btn big semi black"></button>
+  <button id="selectBtn" class="circle-btn semi pink"></button>
+  <button id="deleteBtn" class="circle-btn semi red"></button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
